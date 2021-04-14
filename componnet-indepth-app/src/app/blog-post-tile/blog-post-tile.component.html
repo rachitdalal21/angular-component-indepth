@@ -1,0 +1,8 @@
+<div class="card" [ngClass]="{'fav' : post.isFav}">
+  <div class="card-body">
+    <h5 class="card-title" appHighlight="green"> {{post.title}} </h5>
+    <p class="card-text"> {{post.summary}}</p>
+    <a href="#" (click)="markFav()" class="m-2 btn btn-primary">Mark Favourite</a>
+    <a href="#" class="m-2 btn btn-primary">Read</a>
+  </div>
+</div>

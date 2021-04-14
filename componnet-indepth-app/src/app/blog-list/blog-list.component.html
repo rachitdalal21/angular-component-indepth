@@ -1,0 +1,19 @@
+<app-card >
+  <p herf="#"class="m-2"
+  (click)="onExpandAll()">
+    Expand All
+  </p>
+  <p herf="#" class="m-2"
+     (click)="onFavAll()">
+    Favourite All
+  </p>
+</app-card>
+<app-blog-post-tile #posts
+  *ngFor="let post of blogPost[currentPage]"
+  [post]= "post"></app-blog-post-tile>
+<!--<app-blog-post-tile [post]= "blogPost[currentPage][0]"></app-blog-post-tile>-->
+
+<app-paginator
+  [blogPostSize]= "blogPost.length"
+  (pageNumberClick)="updatePage($event)"></app-paginator>
+
